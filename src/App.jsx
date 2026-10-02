@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Dashboard } from './pages/Dashboard';
 import { Practice } from './pages/Practice';
@@ -9,6 +9,7 @@ import { Achievements } from './pages/Achievements';
 import { Settings } from './pages/Settings';
 import { Lessons } from './pages/Lessons';
 import { NotFound } from './pages/NotFound';
+import { Privacy } from './pages/Privacy';
 import { useTheme } from './hooks/useTheme';
 
 function AppContent({ theme, changeTheme }) {
@@ -28,9 +29,25 @@ function AppContent({ theme, changeTheme }) {
           <Route path="/progress" element={<Progress />} />
           <Route path="/achievements" element={<Achievements />} />
           <Route path="/settings" element={<Settings theme={theme} changeTheme={changeTheme} />} />
+          <Route path="/privacy" element={<Privacy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
+      <footer className={`border-t px-4 py-5 text-sm ${
+        theme === 'light'
+          ? 'border-gray-200 text-gray-500'
+          : 'border-white/[0.06] text-gray-500'
+      }`}>
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 sm:flex-row">
+          <span>TypeFlow</span>
+          <Link
+            to="/privacy"
+            className="transition-colors hover:text-indigo-400"
+          >
+            Privacy Policy
+          </Link>
+        </div>
+      </footer>
     </div>
   );
 }
