@@ -1,0 +1,46 @@
+import React, { useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Navbar } from './components/Navbar';
+import { Dashboard } from './pages/Dashboard';
+import { Practice } from './pages/Practice';
+import { Test } from './pages/Test';
+import { Progress } from './pages/Progress';
+import { Achievements } from './pages/Achievements';
+import { Settings } from './pages/Settings';
+import { Lessons } from './pages/Lessons';
+import { NotFound } from './pages/NotFound';
+import { useTheme } from './hooks/useTheme';
+
+function AppContent({ theme, changeTheme }) {
+  return (
+    <div className={`min-h-screen transition-colors duration-300 ${
+      theme === 'light'
+        ? 'bg-gray-50 text-gray-900'
+        : 'bg-gray-950 text-white'
+    }`}>
+      <Navbar theme={theme} changeTheme={changeTheme} />
+      <main className="pb-16">
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/practice" element={<Practice />} />
+          <Route path="/lessons" element={<Lessons />} />
+          <Route path="/test" element={<Test />} />
+          <Route path="/progress" element={<Progress />} />
+          <Route path="/achievements" element={<Achievements />} />
+          <Route path="/settings" element={<Settings theme={theme} changeTheme={changeTheme} />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+    </div>
+  );
+}
+
+export default function App() {
+  const { theme, changeTheme } = useTheme();
+
+  return (
+    <BrowserRouter>
+      <AppContent theme={theme} changeTheme={changeTheme} />
+    </BrowserRouter>
+  );
+}
