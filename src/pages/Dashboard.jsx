@@ -363,7 +363,7 @@ export function Dashboard() {
             {
               icon: '🎯',
               title: 'Accuracy Tracking',
-              desc: 'Track every keystroke and identify patterns in your mistakes.',
+              desc: 'Review your typing speed, accuracy, and total errors after each test.',
             },
             {
               icon: '📈',
@@ -389,15 +389,15 @@ export function Dashboard() {
           <ContinueLearning daily={daily} onOpenLessons={openLessons} />
         </div>
 
-        {/* Typing facts */}
+        {/* Practice workflow */}
         <div className="rounded-xl bg-white/5 border border-white/10 p-5">
-          <h2 className="font-semibold text-white mb-4">Did you know?</h2>
+          <h2 className="font-semibold text-white mb-4">A simple practice loop</h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {[
-              { value: '40 WPM', label: 'Average typist speed' },
-              { value: '75 WPM', label: 'Professional typist' },
-              { value: '15 min', label: 'Recommended daily practice' },
-              { value: '4 weeks', label: 'Average time to improve 15 WPM' },
+              { value: 'Choose', label: 'a practice mode' },
+              { value: 'Practice', label: 'at your own pace' },
+              { value: 'Test', label: 'your typing' },
+              { value: 'Review', label: 'your results' },
             ].map(item => (
               <div key={item.label} className="text-center">
                 <div className="text-2xl font-bold text-indigo-400 mb-1">{item.value}</div>

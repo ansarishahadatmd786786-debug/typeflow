@@ -147,10 +147,10 @@ export function Practice() {
         <h2 className="font-semibold text-white mb-3">Practice Tips</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {[
-            { icon: '🎯', tip: 'Focus on accuracy first, then speed will follow naturally.' },
+            { icon: '🎯', tip: 'Prioritize accuracy first, then work on increasing your pace.' },
             { icon: '⌨️', tip: 'Keep your fingers on the home row (ASDF JKL;) at all times.' },
-            { icon: '👀', tip: 'Look at the screen, not your keyboard. This builds muscle memory.' },
-            { icon: '🔄', tip: 'Practice for 15-20 minutes daily for the best improvement rate.' },
+            { icon: '👀', tip: 'When you feel comfortable, try looking at the screen instead of your keyboard.' },
+            { icon: '🔄', tip: 'Practice regularly at a pace that fits your schedule.' },
           ].map(item => (
             <div key={item.icon} className="flex items-start gap-2">
               <span className="text-lg flex-shrink-0">{item.icon}</span>

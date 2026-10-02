@@ -10,6 +10,8 @@ import { Settings } from './pages/Settings';
 import { Lessons } from './pages/Lessons';
 import { NotFound } from './pages/NotFound';
 import { Privacy } from './pages/Privacy';
+import { About } from './pages/About';
+import { Contact } from './pages/Contact';
 import { useTheme } from './hooks/useTheme';
 
 function AppContent({ theme, changeTheme }) {
@@ -30,6 +32,8 @@ function AppContent({ theme, changeTheme }) {
           <Route path="/achievements" element={<Achievements />} />
           <Route path="/settings" element={<Settings theme={theme} changeTheme={changeTheme} />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
@@ -40,12 +44,28 @@ function AppContent({ theme, changeTheme }) {
       }`}>
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 sm:flex-row">
           <span>TypeFlow</span>
-          <Link
-            to="/privacy"
-            className="transition-colors hover:text-indigo-400"
-          >
-            Privacy Policy
-          </Link>
+          <nav aria-label="Footer">
+            <div className="flex items-center gap-5">
+              <Link
+                to="/about"
+                className="transition-colors hover:text-indigo-400"
+              >
+                About
+              </Link>
+              <Link
+                to="/contact"
+                className="transition-colors hover:text-indigo-400"
+              >
+                Contact
+              </Link>
+              <Link
+                to="/privacy"
+                className="transition-colors hover:text-indigo-400"
+              >
+                Privacy Policy
+              </Link>
+            </div>
+          </nav>
         </div>
       </footer>
     </div>

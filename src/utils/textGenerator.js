@@ -54,7 +54,7 @@ const ADVANCED_SENTENCES = [
   'The phenomenon of cognitive dissonance occurs when a person simultaneously holds contradictory beliefs, resulting in psychological discomfort that motivates behavioral or attitudinal change.',
   'Extraordinary achievements are invariably preceded by extraordinary preparation; success rarely materializes spontaneously but is instead the culmination of disciplined, purposeful effort.',
   'The unprecedented proliferation of digital communication platforms has fundamentally transformed the nature of interpersonal relationships, professional collaboration, and information dissemination.',
-  'Neuroscientific research increasingly suggests that deliberate practice, characterized by focused attention and immediate feedback, is the primary determinant of expert-level performance.',
+  'A steady typing session gives your hands time to find a comfortable rhythm. Keep your eyes on the next few words, let each finger reach its key, and pause briefly when you need to reset your posture.',
   'The intricate interplay between environmental factors and genetic predispositions continues to challenge researchers attempting to understand the complex origins of human behavior.',
   'Contemporary organizational management theories emphasize the importance of psychological safety, distributed leadership, and inclusive decision-making in fostering innovation.',
   'The philosophical question of whether human consciousness can ever be fully replicated in artificial systems remains one of the most fascinating and contentious debates in modern science.',
